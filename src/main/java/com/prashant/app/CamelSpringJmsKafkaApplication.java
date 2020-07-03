@@ -16,7 +16,7 @@ public class CamelSpringJmsKafkaApplication {
 	}
 
 	@Bean
-	public JmsConnectionFactory jmsConnectionFactory(@Value("qpidUser") String qpidUser, @Value("qpidPassword") String qpidPassword, @Value("qpidBrokerUrl") String qpidBrokerUrl) {
+	public JmsConnectionFactory jmsConnectionFactory(@Value("${qpidUser}") String qpidUser, @Value("${qpidPassword}") String qpidPassword, @Value("${qpidBrokerUrl}") String qpidBrokerUrl) {
 		JmsConnectionFactory jmsConnectionFactory = new JmsConnectionFactory(qpidPassword, qpidPassword, qpidBrokerUrl);
 		return jmsConnectionFactory;
 	}

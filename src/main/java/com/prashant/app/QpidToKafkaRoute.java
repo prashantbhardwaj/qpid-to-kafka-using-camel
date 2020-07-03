@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 public class QpidToKafkaRoute extends RouteBuilder {
 
     public void configure() throws Exception {
-        from("amqp:queue:toKafka")
+        from("amqp:queue:test")
                 .to("kafka:camel");
     }
 }

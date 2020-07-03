@@ -3,14 +3,14 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.prashant</groupId>
-	<artifactId>camel-spring-jms-kafka</artifactId>
+	<artifactId>qpid-to-kafka-using-camel</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>camel-spring-jms-kafka</name>
-	<description>Demo project for Spring Boot</description>
+	<name>qpid-to-kafka-using-camel</name>
+	<description>Reading message from Apache Qpid and sending to Apache Kafka using Apache Camel</description>
 
 	<properties>
 		<java.version>1.8</java.version>
-        <camel.version>3.1.0</camel.version>
+        <camel.version>3.4.0</camel.version>
 	</properties>
 
 
