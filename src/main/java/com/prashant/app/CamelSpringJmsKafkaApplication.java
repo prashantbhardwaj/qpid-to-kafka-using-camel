@@ -3,12 +3,14 @@ package com.prashant.app;
 import org.apache.qpid.jms.JmsConnectionFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Primary;
 import org.springframework.jms.connection.CachingConnectionFactory;
 
 @SpringBootApplication
+@EnableAutoConfiguration
 public class CamelSpringJmsKafkaApplication {
 
 	public static void main(String[] args) {
@@ -21,7 +23,7 @@ public class CamelSpringJmsKafkaApplication {
 		return jmsConnectionFactory;
 	}
 
-	@Bean
+	@Bean(name = "jmsCachingConnectionFactory")
 	@Primary
 	public CachingConnectionFactory jmsCachingConnectionFactory(JmsConnectionFactory jmsConnectionFactory) {
 		CachingConnectionFactory cachingConnectionFactory = new CachingConnectionFactory(jmsConnectionFactory);
