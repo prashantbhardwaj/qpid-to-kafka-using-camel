@@ -23,8 +23,8 @@ public class CamelSpringJmsKafkaApplication {
 		return jmsConnectionFactory;
 	}
 
-	@Bean(name = "jmsCachingConnectionFactory")
-	@Primary
+	//@Bean(name = "jmsCachingConnectionFactory")
+	//@Primary
 	public CachingConnectionFactory jmsCachingConnectionFactory(JmsConnectionFactory jmsConnectionFactory) {
 		CachingConnectionFactory cachingConnectionFactory = new CachingConnectionFactory(jmsConnectionFactory);
 
